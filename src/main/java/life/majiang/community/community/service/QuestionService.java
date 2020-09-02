@@ -15,11 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author wanglei
- * @date 2020/8/30 11:23 下午
- * @File : QuestionService.java
- */
+
 
 @Service
 public class QuestionService {
