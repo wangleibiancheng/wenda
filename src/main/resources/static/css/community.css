@@ -40,3 +40,30 @@ body {
     float: right;
     margin-bottom: 10px;
 }
+.comments {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    /*设置下边框的样式：*/
+}
+
+.comment-sp {
+    margin-top: 0;
+}
+
+.menu {
+    color: #999;
+    margin-top: 5px;
+}
+
+.menu .icon {
+/*.menu .icon类中类*/
+    margin-right: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    /*一些不同的光标：*/
+}
+
+.menu .icon:hover {
+    color: #499ef3;
+}

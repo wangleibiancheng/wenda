@@ -11,6 +11,23 @@
 
 
 </head>
+<script type="application/javascript">
+    // window.onload() 方法用于在网页加载完毕后立刻执行的操作，即当 HTML 文档加载完毕后，立刻执行某个方法。
+    // window.onload=function(){
+    //     Func1();
+    //     Func2();
+    //     Func3();
+    // .....
+    // }
+    // 只有新弹出的页面才有closable=true
+    window.onload = function () {
+        var closable = window.localStorage.getItem("closable");
+        if (closable == "true") {
+            window.close();
+            window.localStorage.removeItem("closable");
+        }
+    }
+</script>
 <body>
 <div th:insert="~{navigation :: nav}"></div>
 <div class="container-fluid main">

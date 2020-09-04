@@ -17,9 +17,22 @@ function post() {
             if (response.code == 200) {
                 $("#comment_section").hide();
             } else {
-                alert(response.message);
+                if (response.code == 2003) {
+                    var isAccepted = confirm(response.message);
+                    // 弹出确认框
+                    if (isAccepted) {
+                        window.open("https://github.com/login/oauth/authorize?client_id=bae014af2b73eb6f170f&redirect_uri=http://localhost:8887/callback&scope=user&state=1");
+                        window.localStorage.setItem("closable", true);
+                        // localStorage 和 sessionStorage属性允许在浏览器中存储 key/value 对的数据。localStorage 用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去删除。localStorage 属性是只读的。
+                        // 保存数据语法：localStorage.setItem("key", "value");
+                        // 读取数据语法：var lastname = localStorage.getItem("key");
+                        // 删除数据语法：localStorage.removeItem("key");
+                    }
+                } else {
+                    alert(response.message);
+                }
+
             }
-            console.log(response);
         },
         dataType: "json"
     });
