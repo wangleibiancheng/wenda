@@ -11,8 +11,10 @@ import java.util.List;
  * @File : PaginationDTO.java
  */
 @Data
-public class PaginationDTO {
-    private List<QuestionDTO> questions;
+public class PaginationDTO<T>  {
+//  List<T>和List的用法是一模一样的,不同的是,List支持任何类型而List<T>只支持T类型,T是在定义时指定的类型.
+//  主要用于强制规范一个集合内存放的数据类型必须一致,这样避免了一些不必要的错误,还可以减少拆,装箱操作,提高程序的运行效率.
+    private List<T> data;
     private boolean showPrevious;
     private boolean showFirstPage;
     private boolean showNext;
@@ -62,4 +64,5 @@ public class PaginationDTO {
             showEndPage = true;
         }
     }
+
 }
