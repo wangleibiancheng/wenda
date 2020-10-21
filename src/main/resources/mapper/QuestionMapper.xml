@@ -190,11 +190,11 @@
       This element was generated on Sat Sep 05 08:45:55 CST 2020.
     -->
     insert into question (id, title, gmt_create, 
-      gmt_modified, creator, comment_count, 
+      gmt_modified, creator, comment_count,
       view_count, like_count, tag, 
       description)
     values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=BIGINT}, 
-      #{gmtModified,jdbcType=BIGINT}, #{creator,jdbcType=BIGINT}, #{commentCount,jdbcType=INTEGER}, 
+      #{gmtModified,jdbcType=BIGINT}, #{creator,jdbcType=BIGINT}, #{commentCount,jdbcType=INTEGER},
       #{viewCount,jdbcType=INTEGER}, #{likeCount,jdbcType=INTEGER}, #{tag,jdbcType=VARCHAR}, 
       #{description,jdbcType=LONGVARCHAR})
   </insert>

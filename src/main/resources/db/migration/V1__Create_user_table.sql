@@ -6,4 +6,5 @@ CREATE TABLE user
     token varchar(36),
     gmt_create bigint,
     gmt_modified bigint
+
 );
